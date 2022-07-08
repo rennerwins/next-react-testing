@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import { Hello } from "./Hello";
+import { render, screen } from "@testing-library/react";
 
 it('renders "Hello World"', () => {
   render(<Hello />);
