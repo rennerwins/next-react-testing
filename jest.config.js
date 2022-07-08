@@ -1,11 +1,19 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "jsdom",
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   globals: {
-    "ts-jest": {
-      tsconfig: "./tsconfig.test.json",
+    'ts-jest': {
+      tsconfig: './tsconfig.test.json',
     },
   },
-  setupFilesAfterEnv: ["./src/jest.setup.ts"],
+  setupFilesAfterEnv: ['./src/jest.setup.ts'],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
 };
